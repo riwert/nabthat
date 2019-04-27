@@ -105,13 +105,14 @@ replaceText.addEventListener('click', function(e) {
                 text.className = 'index-1';
                 texts.innerHTML = text.outerHTML;
                 break;
-            case '3':
-                let lastIndex = data.length - 1;
-                let randomIndex = getRandomInt(2, lastIndex);
+            case '3': {
+                const lastIndex = data.length - 1;
+                const randomIndex = getRandomInt(2, lastIndex);
                 text.innerText = data[randomIndex].body;
                 text.className = 'index-' + randomIndex;
                 texts.innerHTML = text.outerHTML;
                 break;
+            }
         }
     } else {
         chooseOptionFirst();
@@ -145,9 +146,9 @@ appendText.addEventListener('click', function(e) {
                     return;
                 }
                 break;
-            case '3':
-                let lastIndex = data.length - 1;
-                let randomIndex = getRandomInt(2, lastIndex);
+            case '3': {
+                const lastIndex = data.length - 1;
+                const randomIndex = getRandomInt(2, lastIndex);
                 text.innerText = data[randomIndex].body;
                 text.className = 'index-' + randomIndex;
                 if ( ! texts.querySelector('.' + text.className)) {
@@ -157,6 +158,7 @@ appendText.addEventListener('click', function(e) {
                     return;
                 }
                 break;
+            }
         }
         sortArticles();
     } else {
