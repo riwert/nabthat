@@ -22,7 +22,7 @@
     opacity: 0;
   }
   to {
-    max-height: 100px;
+    max-height: 10rem;
     opacity: 1;
   }
 }
@@ -33,7 +33,7 @@
     opacity: 0;
   }
   to {
-    max-height: 100px;
+    max-height: 10rem;
     opacity: 1;
   }
 }
@@ -385,6 +385,13 @@ header .page-name .personal-data {
   }
 }
 
+#content .blocks .block-2 .buttons {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 #content .blocks .block-2 .buttons .btn {
   position: relative;
   z-index: 1;
@@ -474,6 +481,10 @@ header .page-name .personal-data {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 
