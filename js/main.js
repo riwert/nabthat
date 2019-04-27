@@ -19,10 +19,6 @@ function readJson(file, callback) {
     rawFile.send(null);
 }
 
-readJson('store/data.json', function(content) {
-    data = JSON.parse(content);
-});
-
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -54,6 +50,27 @@ function alreadyExists() {
     const msg = 'Ten tekst już istnieje.';
     displayAlert(msg);
 }
+
+function sortArticles() {
+    console.log('sorting...');
+    const articles = texts.querySelectorAll('article');
+    const articlesArray = Array.from(articles);
+    const articlesSorted = articlesArray.sort(function (a, b) {
+        if (a.innerText < b.innerText) return -1;
+        else if (a.innerText > b.innerText) return 1;
+        return 0;
+    });
+
+    let articlesList = '';
+    for (let i = 0, len = articlesSorted.length; i < len; i++) {
+        articlesList += articlesSorted[i].outerHTML;
+    }
+    texts.innerHTML = articlesList;
+}
+
+readJson('store/data.json', function(content) {
+    data = JSON.parse(content);
+});
 
 resetSettings.addEventListener('click', function(e) {
     e.preventDefault();
@@ -113,6 +130,7 @@ appendText.addEventListener('click', function(e) {
                     texts.appendChild(text);
                 } else {
                     alreadyExists();
+                    return;
                 }
                 break;
             case '2':
@@ -122,6 +140,7 @@ appendText.addEventListener('click', function(e) {
                     texts.appendChild(text);
                 } else {
                     alreadyExists();
+                    return;
                 }
                 break;
             case '3':
@@ -132,9 +151,11 @@ appendText.addEventListener('click', function(e) {
                     texts.appendChild(text);
                 } else {
                     alreadyExists();
+                    return;
                 }
                 break;
         }
+        sortArticles();
     } else {
         chooseOptionFirst();
     }
