@@ -52,11 +52,11 @@ function alreadyExists() {
 }
 
 function sortArticles() {
-    const articles = texts.querySelectorAll('article');
+    const articles = document.querySelectorAll('article');
     const articlesArray = Array.from(articles);
     const articlesSorted = articlesArray.sort(function (a, b) {
-        if (a.innerText < b.innerText) return -1;
-        else if (a.innerText > b.innerText) return 1;
+        if (a.innerText.toUpperCase() < b.innerText.toUpperCase()) return -1;
+        else if (a.innerText.toUpperCase() > b.innerText.toUpperCase()) return 1;
         return 0;
     });
 
