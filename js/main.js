@@ -8,7 +8,7 @@ const texts = document.querySelector('.texts');
 let data = [];
 
 function readJson(file, callback) {
-    var rawFile = new XMLHttpRequest();
+    const rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType('application/json');
     rawFile.open('GET', file, true);
     rawFile.onreadystatechange = function() {
@@ -52,7 +52,6 @@ function alreadyExists() {
 }
 
 function sortArticles() {
-    console.log('sorting...');
     const articles = texts.querySelectorAll('article');
     const articlesArray = Array.from(articles);
     const articlesSorted = articlesArray.sort(function (a, b) {
@@ -74,11 +73,13 @@ readJson('store/data.json', function(content) {
 
 resetSettings.addEventListener('click', function(e) {
     e.preventDefault();
+
     location.reload();
 });
 
 showPersonalData.addEventListener('click', function(e) {
     e.preventDefault();
+
     const personalData = document.createElement('div');
     personalData.className = 'personal-data';
     personalData.innerText = 'Robert Wierzchowski';
