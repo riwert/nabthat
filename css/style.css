@@ -226,7 +226,7 @@ header .container {
   background: #2a2d36;
   color: #a2a8b8;
   min-height: 100vh;
-  padding: 13rem 0 4.25rem;
+  padding: 11rem 0 4.25rem;
 }
 
 #content .alert {
@@ -273,7 +273,7 @@ header .container {
 #content .page-title h1::after {
   content: '';
   display: block;
-  width: 80%;
+  width: 14.5rem;
   height: 1px;
   margin: 1rem auto;
   background: #fff;
@@ -485,6 +485,12 @@ header .container {
   text-transform: uppercase;
 }
 
+@media (min-width: 960px) {
+  #content {
+    padding: 13rem 0 4.25rem;
+  }
+}
+
 footer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -526,7 +532,6 @@ footer .columns .column-1 .css-is-awesome {
   display: inline-block;
   position: relative;
   z-index: 5;
-  overflow: hidden;
   font-size: 1.75rem;
   line-height: 2rem;
   padding: 0.5rem;
