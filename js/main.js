@@ -105,9 +105,10 @@ replaceText.addEventListener('click', function(e) {
                 texts.innerHTML = text.outerHTML;
                 break;
             case '3':
-                let random = getRandomInt(2, 9);
-                text.innerText = data[random].body;
-                text.className = 'index-' + random;
+                let lastIndex = data.length - 1;
+                let randomIndex = getRandomInt(2, lastIndex);
+                text.innerText = data[randomIndex].body;
+                text.className = 'index-' + randomIndex;
                 texts.innerHTML = text.outerHTML;
                 break;
         }
@@ -144,9 +145,10 @@ appendText.addEventListener('click', function(e) {
                 }
                 break;
             case '3':
-                let random = getRandomInt(2, 9);
-                text.innerText = data[random].body;
-                text.className = 'index-' + random;
+                let lastIndex = data.length - 1;
+                let randomIndex = getRandomInt(2, lastIndex);
+                text.innerText = data[randomIndex].body;
+                text.className = 'index-' + randomIndex;
                 if ( ! texts.querySelector('.' + text.className)) {
                     texts.appendChild(text);
                 } else {
