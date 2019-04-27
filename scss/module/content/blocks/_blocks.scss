@@ -1,0 +1,67 @@
+.blocks {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+
+    @media (min-width: $md) {
+        flex-flow: nowrap;
+    }
+
+    .block {
+        flex: 1 1 33%;
+        max-width: 100%;
+
+        .title {
+
+            h3 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-top: 3.5rem;
+                margin-bottom: 1.5rem;
+                font-size: 1.35rem;
+                color: #fff;
+
+                @media (min-width: $md) {
+                    margin-top: 0;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    .block-1 {
+        @import 'option-form';
+
+        text-align: center;
+
+        @media (min-width: $sm) {
+            text-align: left;
+        }
+
+        @media (min-width: $md) {
+            text-align: center;
+        }
+    }
+
+    .block-2 {
+        @import 'buttons';
+
+        text-align: center;
+
+        @media (min-width: $sm) {
+            text-align: right;
+        }
+
+        @media (min-width: $md) {
+            text-align: center;
+        }
+    }
+
+    .block-3 {
+        @import 'texts';
+
+        text-align: center;
+    }
+}

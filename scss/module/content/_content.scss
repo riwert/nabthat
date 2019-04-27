@@ -1,0 +1,13 @@
+#content {
+    @import 'alert';
+    @import 'page-title';
+    @import 'blocks/blocks';
+
+    position: relative;
+    flex: 1 1 auto;
+    text-align: center;
+    background: $content-bg;
+    color: $content-font;
+    min-height: 100vh;
+    padding: 13rem 0 4.25rem;
+}

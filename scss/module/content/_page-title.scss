@@ -1,0 +1,25 @@
+.page-title {
+
+    h1 {
+        display: inline-block;
+        color: #fff;
+        font-weight: normal;
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-shadow: 2px 2px 0 #000;
+
+        @media (min-width: $md) {
+            margin-bottom: 5.35rem;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 80%;
+            height: 1px;
+            margin: 1rem auto;
+            background: #fff;
+        }
+    }
+}

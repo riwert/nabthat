@@ -1,0 +1,10 @@
+.page-name {
+    font-size: 2.25rem;
+    text-align: right;
+
+    .personal-data {
+        font-weight: 300;
+        overflow: hidden;
+        animation: appear 0.5s;
+    }
+}

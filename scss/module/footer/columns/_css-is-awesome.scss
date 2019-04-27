@@ -1,0 +1,35 @@
+.css-is-awesome {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    padding: 0.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 4;
+        top: 1%;
+        left: 1%;
+        width: 75%;
+        height: 97%;
+        border: 1px solid $footer-font;
+        transition: 1s;
+    }
+
+    &:hover {
+        color: $content-font;
+        transition: 0.3s;
+
+        &::before {
+            border-color: $logo-bg-hover;
+            transform: rotate(180deg);
+            transition: 1s;
+        }
+    }
+}

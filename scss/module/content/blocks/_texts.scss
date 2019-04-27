@@ -1,0 +1,12 @@
+.texts {
+    font-size: 1.125rem;
+    font-weight: 300;
+
+    article {
+        margin: 0.5rem 0;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+}
