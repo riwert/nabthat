@@ -31,13 +31,13 @@ function displayAlert(msg) {
     alert.className = 'alert';
     content.appendChild(alert);
 
-    let loop = setTimeout(function() {
+    let timeout = setTimeout(function() {
         alert.parentNode.removeChild(alert);
     }, 2000);
 
     alert.addEventListener('click', function() {
         alert.parentNode.removeChild(alert);
-        clearTimeout(loop);
+        clearTimeout(timeout);
     });
 }
 
