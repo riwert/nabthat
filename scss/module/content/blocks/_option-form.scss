@@ -38,7 +38,7 @@
             &:checked {
 
                 & + span {
-                    font-weight: bold;
+                    font-weight: 600;
 
                     &::before {
                         content: '\f192';

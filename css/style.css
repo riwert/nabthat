@@ -370,7 +370,7 @@ header .container {
 }
 
 #content .blocks .block-1 .option-form label input[type="radio"]:checked + span {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #content .blocks .block-1 .option-form label input[type="radio"]:checked + span::before {
@@ -647,6 +647,7 @@ footer .columns .column-3 .action-form .actions .action {
 
 footer .columns .column-3 .action-form .actions .action a {
   color: #0a0b0f;
+  font-weight: 600;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
