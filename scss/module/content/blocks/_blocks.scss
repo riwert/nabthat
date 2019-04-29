@@ -9,9 +9,17 @@
     }
 
     .block {
-        flex: 1 1 33%;
+        flex: 1 1 100%;
         max-width: 100%;
 
+        @media (min-width: $xs) {
+            flex: 1 1 50%;
+        }
+    
+        @media (min-width: $md) {
+            flex: 1 1 33%;
+        }
+    
         .title {
 
             h3 {
@@ -47,7 +55,7 @@
 
     .block-2 {
         @import 'buttons';
-
+                
         text-align: center;
 
         @media (min-width: $sm) {

@@ -56,6 +56,10 @@ html {
             margin: auto;
             width: 96%;
 
+            @media (min-width: $xs) {
+                width: 380px;
+            }
+
             @media (min-width: $sm) {
                 width: 560px;
             }

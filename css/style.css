@@ -120,6 +120,12 @@ html body .container {
   width: 96%;
 }
 
+@media (min-width: 400px) {
+  html body .container {
+    width: 380px;
+  }
+}
+
 @media (min-width: 600px) {
   html body .container {
     width: 560px;
@@ -295,9 +301,25 @@ header .container {
 
 #content .blocks .block {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 33%;
-          flex: 1 1 33%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   max-width: 100%;
+}
+
+@media (min-width: 400px) {
+  #content .blocks .block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  #content .blocks .block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 33%;
+            flex: 1 1 33%;
+  }
 }
 
 #content .blocks .block .title h3 {
