@@ -44,7 +44,7 @@
 
         text-align: center;
 
-        @media (min-width: $sm) {
+        @media (min-width: $xs) {
             text-align: left;
         }
 
@@ -58,7 +58,7 @@
                 
         text-align: center;
 
-        @media (min-width: $sm) {
+        @media (min-width: $xs) {
             text-align: right;
         }
 
