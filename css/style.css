@@ -128,7 +128,7 @@ html body .container {
 
 @media (min-width: 600px) {
   html body .container {
-    width: 560px;
+    width: 540px;
   }
 }
 
