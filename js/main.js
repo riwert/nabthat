@@ -51,6 +51,11 @@ function alreadyExists() {
     displayAlert(msg);
 }
 
+function allAlreadyExists() {
+    const msg = 'Wszystkie dostępne losowe teksty już istnieją.';
+    displayAlert(msg);
+}
+
 function sortArticles() {
     const articles = document.querySelectorAll('article');
     const articlesArray = Array.from(articles);
@@ -109,7 +114,7 @@ replaceText.addEventListener('click', function(e) {
                 const lastIndex = data.length - 1;
                 const randomIndex = getRandomInt(2, lastIndex);
                 text.innerText = data[randomIndex].body;
-                text.className = 'index-' + randomIndex;
+                text.className = 'index-' + randomIndex + ' random';
                 texts.innerHTML = text.outerHTML;
                 break;
             }
@@ -148,13 +153,16 @@ appendText.addEventListener('click', function(e) {
                 break;
             case '3': {
                 const lastIndex = data.length - 1;
-                const randomIndex = getRandomInt(2, lastIndex);
-                text.innerText = data[randomIndex].body;
-                text.className = 'index-' + randomIndex;
+                do {
+                    let randomIndex = getRandomInt(2, lastIndex);
+                    text.innerText = data[randomIndex].body;
+                    text.className = 'index-' + randomIndex;
+                } while (texts.querySelector('.' + text.className) && texts.querySelectorAll('article.random').length < (data.length - 2));
                 if ( ! texts.querySelector('.' + text.className)) {
+                    text.className += ' random';
                     texts.appendChild(text);
                 } else {
-                    alreadyExists();
+                    allAlreadyExists();
                     return;
                 }
                 break;
